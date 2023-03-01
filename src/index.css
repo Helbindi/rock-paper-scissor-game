@@ -1,0 +1,214 @@
+:root {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --dark-txt: hsl(229, 25%, 31%);
+  --score-txt: hsl(229, 64%, 46%);
+  --header-outline: hsl(217, 16%, 45%);
+
+  --background-clr1: hsl(214, 47%, 23%);
+  --background-clr2: hsl(237, 49%, 15%);
+
+  --rock-gradient1: hsl(349, 71%, 52%);
+  --rock-gradient2: hsl(349, 70%, 56%);
+  --paper-gradient1: hsl(230, 89%, 62%);
+  --paper-gradient2: hsl(230, 89%, 65%);
+  --scissor-gradient1: hsl(39, 89%, 49%);
+  --scissor-gradient2: hsl(40, 84%, 53%);
+  --spock-gradient1: hsl(189, 59%, 53%);
+  --spock-gradient2: hsl(189, 58%, 57%);
+  --lizard-gradient1: hsl(261, 73%, 60%);
+  --lizard-gradient2: hsl(261, 72%, 63%);
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    0.25turn,
+    var(--background-clr2),
+    var(--background-clr1),
+    var(--background-clr2)
+  );
+}
+
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  padding: 1em;
+}
+
+.game-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 4px solid var(--header-outline);
+  border-radius: 1em;
+  padding: 0.5em 1em;
+}
+
+.game-header img {
+  height: 75px;
+}
+
+.game-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--dark-txt);
+  background-color: white;
+  border-radius: 10px;
+  width: 100px;
+}
+
+.game-score p {
+  margin-bottom: 0;
+  color: var(--score-txt);
+}
+
+.game-points {
+  margin: 0;
+  font-size: 3rem;
+}
+
+/* Game UI */
+.game-ui {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.game-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pentagon-img {
+  height: 250px;
+}
+
+.select-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.select-btn img {
+  height: 50px;
+  background-color: white;
+  padding: 0.75em;
+  border-radius: 50%;
+}
+
+.rock {
+  background: linear-gradient(var(--rock-gradient1), var(--rock-gradient2));
+  position: absolute;
+  bottom: -20px;
+  right: 0px;
+}
+
+.paper {
+  background: linear-gradient(var(--paper-gradient1), var(--paper-gradient2));
+  position: absolute;
+  top: 50px;
+  right: -20px;
+}
+
+.scissors {
+  background: linear-gradient(
+    var(--scissor-gradient1),
+    var(--scissor-gradient2)
+  );
+  position: absolute;
+  top: -25px;
+}
+
+.spock {
+  background: linear-gradient(var(--spock-gradient1), var(--spock-gradient2));
+  position: absolute;
+  top: 50px;
+  left: -20px;
+}
+
+.lizard {
+  background: linear-gradient(var(--lizard-gradient1), var(--lizard-gradient2));
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+}
+
+/* Rules CSS */
+.rules-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+
+  width: 100px;
+  padding: 0.5em 1em;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.rules-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  background-color: white;
+  color: var(--dark-txt);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.rules-container h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.close-rules {
+  cursor: pointer;
+  transform: scale(1.5);
+}
