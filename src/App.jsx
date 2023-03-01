@@ -5,6 +5,7 @@ import logo from "./assets/images/logo-bonus.svg";
 import pentagon from "./assets/images/bg-pentagon.svg";
 import "./index.css";
 import Selection from "./components/Selection";
+import Reveal from "./components/Reveal";
 
 function App() {
   const [isRulesActive, setIsRulesActive] = useState(false);
@@ -30,7 +31,8 @@ function App() {
 
       {/* User Selection and Game UI elements */}
       <div className="game-ui">
-        <Selection />
+        {/* <Selection /> */}
+        <Reveal />
       </div>
 
       <button className="rules-btn" onClick={(e) => toggleRules(e)}>

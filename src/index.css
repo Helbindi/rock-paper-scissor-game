@@ -154,7 +154,7 @@ p {
     var(--scissor-gradient2)
   );
   position: absolute;
-  top: -25px;
+  top: -30px;
 }
 
 .spock {
@@ -169,6 +169,70 @@ p {
   position: absolute;
   bottom: -20px;
   left: 0px;
+}
+
+/* Reveal CSS */
+.reveal-container {
+  display: grid;
+  grid-template-areas:
+    "player house"
+    "result result";
+  gap: 1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.player {
+  grid-area: player;
+}
+
+.house {
+  grid-area: house;
+}
+
+.reveal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.reveal div {
+  cursor: initial;
+  position: initial;
+}
+
+.empty-select {
+  content: "";
+  width: 75px;
+  height: 75px;
+  background-color: hsl(237, 49%, 15%);
+  border-radius: 50%;
+}
+
+.reveal-results {
+  grid-area: result;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.reveal-results h2 {
+  font-size: 2.5rem;
+}
+
+.play-again {
+  color: var(--dark-txt);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+
+  padding: 1em 3em;
+  border-radius: 10px;
+  border-style: none;
 }
 
 /* Rules CSS */
@@ -237,6 +301,17 @@ p {
 
   .game-header img {
     height: 100%;
+  }
+
+  /* Reveal CSS */
+  .reveal-container {
+    grid-template-areas: "player result house";
+    gap: 100px;
+  }
+
+  .reveal {
+    gap: 2em;
+    transform: scale(1.5);
   }
 
   /* Rules CSS */

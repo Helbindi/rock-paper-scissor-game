@@ -6,22 +6,27 @@ import lizard from "./assets/images/icon-lizard.svg";
 
 export const images = [
   {
+    id: 0,
     name: "rock",
     src: rock,
   },
   {
+    id: 1,
     name: "paper",
     src: paper,
   },
   {
+    id: 2,
     name: "scissors",
     src: scissors,
   },
   {
+    id: 3,
     name: "spock",
     src: spock,
   },
   {
+    id: 4,
     name: "lizard",
     src: lizard,
   },
