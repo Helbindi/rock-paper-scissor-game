@@ -43,7 +43,7 @@ function App() {
         <div className="rules-container">
           <section className="rules-content">
             <h2>Rules</h2>
-            <img src={rules} alt="game-rules-image" />
+            <img className="rules-img" src={rules} alt="game-rules-image" />
             <img
               className="close-rules"
               src={closeBtn}

@@ -224,15 +224,19 @@ p {
 }
 
 .play-again {
-  color: var(--dark-txt);
+  color: var(--background-clr1);
   text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-weight: 800;
   cursor: pointer;
 
   padding: 1em 3em;
   border-radius: 10px;
   border-style: none;
+}
+
+.play-again:hover {
+  color: white;
+  background-color: var(--score-txt);
 }
 
 /* Rules CSS */
@@ -283,7 +287,6 @@ p {
 
 .close-rules {
   cursor: pointer;
-  transform: scale(1.5);
 }
 
 @media screen and (min-width: 768px) {
@@ -316,30 +319,33 @@ p {
 
   /* Rules CSS */
   .rules-container {
-    background-color: hsl(0, 0%, 0%, 0.5);
+    background-color: hsl(0, 0%, 0%, 0.7);
   }
 
   .rules-content {
     background-color: white;
-    border-radius: 1em;
-    width: 100%;
-    max-width: 400px;
+    display: grid;
+    grid-template-areas:
+      "rules close"
+      "imgage imgage";
     gap: 1em;
-    padding: 5em 1em;
-
+    padding: 2em;
+    border-radius: 1em;
     position: relative;
   }
 
   .rules-content h2 {
-    position: absolute;
-    top: 4%;
-    left: 10%;
+    grid-area: rules;
   }
 
   .close-rules {
     position: absolute;
-    top: 7%;
-    right: 10%;
+    right: 0;
+    grid-area: close;
+  }
+
+  .rules-img {
+    grid-area: imgage;
   }
 
   /* Game UI */
