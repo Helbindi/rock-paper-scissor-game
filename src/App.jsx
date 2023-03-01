@@ -38,16 +38,18 @@ function App() {
       </button>
       {/* Rules Toggle */}
       {isRulesActive && (
-        <section className="rules-container">
-          <h2>Rules</h2>
-          <img src={rules} alt="game-rules-image" />
-          <img
-            className="close-rules"
-            src={closeBtn}
-            alt="close-image"
-            onClick={(e) => toggleRules(e)}
-          />
-        </section>
+        <div className="rules-container">
+          <section className="rules-content">
+            <h2>Rules</h2>
+            <img src={rules} alt="game-rules-image" />
+            <img
+              className="close-rules"
+              src={closeBtn}
+              alt="close-image"
+              onClick={(e) => toggleRules(e)}
+            />
+          </section>
+        </div>
       )}
     </div>
   );

@@ -56,10 +56,11 @@ p {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: 70px;
   padding: 1em;
 }
 
+/* Header CSS */
 .game-header {
   display: flex;
   flex-direction: row;
@@ -200,7 +201,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .rules-container h2 {
@@ -208,7 +209,94 @@ p {
   font-size: 2rem;
 }
 
+.rules-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 3em;
+}
+
 .close-rules {
   cursor: pointer;
   transform: scale(1.5);
+}
+
+@media screen and (min-width: 768px) {
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 125px;
+  }
+  .game-header {
+    width: 100%;
+    max-width: 600px;
+    padding: 1em;
+  }
+
+  .game-header img {
+    height: 100%;
+  }
+
+  /* Rules CSS */
+  .rules-container {
+    background-color: hsl(0, 0%, 0%, 0.5);
+  }
+
+  .rules-content {
+    background-color: white;
+    border-radius: 1em;
+    width: 100%;
+    max-width: 400px;
+    gap: 1em;
+    padding: 5em 1em;
+
+    position: relative;
+  }
+
+  .rules-content h2 {
+    position: absolute;
+    top: 4%;
+    left: 10%;
+  }
+
+  .close-rules {
+    position: absolute;
+    top: 7%;
+    right: 10%;
+  }
+
+  /* Game UI */
+  .pentagon-img {
+    height: 400px;
+  }
+
+  .select-btn img {
+    height: 64px;
+  }
+
+  .rock {
+    bottom: -30px;
+    right: 10px;
+  }
+
+  .paper {
+    top: 80px;
+    right: -30px;
+  }
+
+  .scissors {
+    top: -45px;
+  }
+
+  .spock {
+    top: 80px;
+    left: -30px;
+  }
+
+  .lizard {
+    bottom: -30px;
+    left: 10px;
+  }
 }
