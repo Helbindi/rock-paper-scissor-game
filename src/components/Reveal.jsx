@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import useGameContext from "./GameContext";
 import { images } from "../images";
 
 function Reveal() {
-  const [houseSelected, setHouseSelected] = useState();
-  const [gameResult, setGameResult] = useState();
   const { state, houseSelect, updateScore, updateStatus, resetSelect } =
     useGameContext();
   const player = state.player.selection;
