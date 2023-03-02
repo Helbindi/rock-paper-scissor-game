@@ -26,15 +26,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Desktop:
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![1677752889975](image/README/1677752889975.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
+Mobile:
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![1677752892591](image/README/1677752892591.png)
 
 ### Links
 
@@ -54,7 +52,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-For this project, I utilized the Reducer and Context hooks to manage the state of my game.
+For this project, I learned to utilize the Reducer and Context hooks to manage the state of my game. Another part that was tricky for me was determining the best way to transition the Roshambo game logic into code.
 
 ## Author
 
