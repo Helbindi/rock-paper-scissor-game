@@ -1,3 +1,4 @@
+// Get or Create a Local Storage for GameScore
 let localScore;
 if (localStorage.getItem("gameScore")) {
   localScore = localStorage.getItem("gameScore");
@@ -32,7 +33,6 @@ const gameReducer = (state, action) => {
 
   switch (type) {
     case "PLAYER_SELECT": {
-      console.log("PLAYER_SELECT", payload);
       const newSelect = {
         player: {
           isSelected: true,
@@ -47,7 +47,6 @@ const gameReducer = (state, action) => {
       return { ...state, ...newSelect };
     }
     case "HOUSE_SELECT": {
-      console.log("HOUSE_SELECT", payload);
       const newSelect = {
         house: {
           isSelected: true,
@@ -62,7 +61,6 @@ const gameReducer = (state, action) => {
       return { ...state, ...newSelect };
     }
     case "UPDATE_SCORE": {
-      console.log("UPDATE_SCORE", payload);
       let newScore = state.score + payload.value;
       if (newScore < 0) newScore = 0;
       localStorage.gameScore = newScore;
@@ -70,13 +68,9 @@ const gameReducer = (state, action) => {
       return { ...state, score: newScore };
     }
     case "GAME_STATUS": {
-      console.log("GAME_STATUS", payload);
-
       return { ...state, gameStatus: payload.result };
     }
     case "RESET_SELECT": {
-      console.log("RESET_SELECT", payload);
-
       return {
         ...state,
         player: initialState.player,

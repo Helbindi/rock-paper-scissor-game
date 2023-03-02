@@ -19,8 +19,6 @@ function Game() {
     }
   }
 
-  console.log(state);
-
   return (
     <div className="game-container">
       {/* Game Title and Current Game Score */}
@@ -37,10 +35,10 @@ function Game() {
         {state.player.isSelected ? <Reveal /> : <Selection />}
       </div>
 
+      {/* Rules Toggle */}
       <button className="rules-btn" onClick={(e) => toggleRules(e)}>
         Rules
       </button>
-      {/* Rules Toggle */}
       {isRulesActive && (
         <div className="rules-container">
           <section className="rules-content">

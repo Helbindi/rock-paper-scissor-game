@@ -195,11 +195,18 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 1em;
+
+  position: relative;
 }
 
-.reveal div {
+.reveal h2 {
+  z-index: 50;
+}
+
+.reveal .select-btn {
   cursor: initial;
   position: initial;
+  z-index: 50;
 }
 
 .empty-select {
@@ -217,6 +224,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: 1em;
+  z-index: 10;
 }
 
 .reveal-results h2 {
@@ -237,6 +245,64 @@ p {
 .play-again:hover {
   color: white;
   background-color: var(--score-txt);
+}
+
+.win-screen {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ripple {
+  content: "";
+  top: 70px;
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.inner {
+  background-color: hsl(217, 16%, 45%, 0.15);
+  animation: pulseInner 1500ms infinite;
+}
+
+.mid {
+  background-color: hsl(217, 16%, 45%, 0.15);
+  animation: pulseMid 1500ms infinite;
+}
+
+.outer {
+  background-color: hsl(217, 16%, 45%, 0.15);
+  animation: pulseOuter 1500ms infinite;
+}
+
+@keyframes pulseInner {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes pulseMid {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2.5);
+  }
+}
+
+@keyframes pulseOuter {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3);
+  }
 }
 
 /* Rules CSS */
@@ -314,6 +380,12 @@ p {
 
   .reveal {
     transform: scale(1.5);
+  }
+
+  .ripple {
+    top: 60px;
+    height: 100px;
+    width: 100px;
   }
 
   /* Rules CSS */

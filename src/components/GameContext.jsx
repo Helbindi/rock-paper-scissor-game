@@ -7,8 +7,6 @@ export const GameProvider = ({ children }) => {
   const [state, dispatch] = useReducer(gameReducer, initialState);
 
   const playerSelect = (selected) => {
-    console.log("playerSelect Function: ", selected);
-
     dispatch({
       type: "PLAYER_SELECT",
       payload: {
@@ -20,8 +18,6 @@ export const GameProvider = ({ children }) => {
   };
 
   const houseSelect = (selected) => {
-    console.log("houseSelect Function: ", selected);
-
     dispatch({
       type: "HOUSE_SELECT",
       payload: {
@@ -33,8 +29,6 @@ export const GameProvider = ({ children }) => {
   };
 
   const updateScore = (value) => {
-    console.log("updateScore Function: ", value);
-
     dispatch({
       type: "UPDATE_SCORE",
       payload: {
@@ -44,8 +38,6 @@ export const GameProvider = ({ children }) => {
   };
 
   const updateStatus = (result) => {
-    console.log("updateStatus Function: ", result);
-
     dispatch({
       type: "GAME_STATUS",
       payload: {
