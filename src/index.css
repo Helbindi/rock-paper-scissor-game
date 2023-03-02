@@ -313,7 +313,6 @@ p {
   }
 
   .reveal {
-    gap: 2em;
     transform: scale(1.5);
   }
 

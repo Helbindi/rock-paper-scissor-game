@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import pentagon from "../assets/images/bg-pentagon.svg";
 import GameBtn from "./GameBtn";
 import { images } from "../images";
+import useGameContext from "./GameContext";
 
 function Selection() {
-  const [selected, setSelected] = useState();
+  const { playerSelect } = useGameContext();
 
   function handleClick(e, id) {
     e.preventDefault();
-    if (selected !== id) {
-      setSelected(id);
-    }
+    playerSelect(images[id]);
   }
 
-  console.log(selected);
   return (
     <div className="game-selection">
       <img className="pentagon-img" src={pentagon} alt="" />
