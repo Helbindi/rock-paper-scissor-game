@@ -36,8 +36,8 @@ Mobile:
 
 ### Links
 
-- Solution URL: [https://github.com/Helbindi/rock-paper-scissor-game]()
-- Live Site URL: [https://helbindi-roshambo.vercel.app]()
+- Solution URL: [https://github.com/Helbindi/rock-paper-scissor-game](https://github.com/Helbindi/rock-paper-scissor-game)
+- Live Site URL: [https://helbindi-roshambo.vercel.app](https://github.com/Helbindi/rock-paper-scissor-game)
 
 ## My process
 
@@ -56,5 +56,5 @@ For this project, I learned to utilize the Reducer and Context hooks to manage t
 
 ## Author
 
-- Website - [https://my-projects-site.vercel.app]()
+- Website - [https://my-projects-site.vercel.app](https://my-projects-site.vercel.app)
 - Frontend Mentor - [@Helbindi](https://www.frontendmentor.io/profile/Helbindi)
